@@ -173,8 +173,10 @@ btn
 }
 
 #total-belanja{
+  top: 42%;
   left: 92.5%;
   position: absolute;
+  display: block;
   background-color: red;
   padding: 2px 5px;
   border-radius: 50%;
@@ -419,6 +421,7 @@ btn
 .menu .row .menu-card {
   width: 100%;
   margin-right: 50px ;
+  margin-left: 50px ;
   text-align: center;
   padding-bottom: 4rem;
 }
@@ -689,6 +692,7 @@ footer .credit a {
   }
 
   #total-belanja{
+    top: 0;
     left: 87%;
   }
 
@@ -754,6 +758,10 @@ footer .credit a {
     font-size: 1.2rem;
   }
 
+  .menu .row .menu-card {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
   .contact .row {
     flex-wrap: wrap;
   }
@@ -799,6 +807,10 @@ footer .credit a {
     font-size: 16px; /* Mengatur ukuran font harga untuk layar kecil */
     text-align: center; /* Menyelaraskan teks harga ke tengah */
   }
+  
+  #total-belanja{
+    top: 49%;
+  }
 }
 
 /* Mobile Phone */
@@ -807,6 +819,7 @@ footer .credit a {
   #total-belanja{
     left: 83.9% ;
   }
+
 }
 @media (max-width: 450px) {
   html {

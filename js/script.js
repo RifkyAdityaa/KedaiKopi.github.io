@@ -131,6 +131,8 @@ function displayCartItems() {
     containerCard.innerHTML = "<p>Belum ada barang di keranjang</p>";
     banyakCart.style.display = "none"
     return;
+  }else{
+    banyakCart.style.display = "block"
   }
 
   const totalcard = cartItems.length
