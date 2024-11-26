@@ -4,14 +4,6 @@ document.querySelector('#hamburger-menu').onclick = () => {
   navbarNav.classList.toggle('active');
 };
 
-// Toggle class active untuk search form
-const searchForm = document.querySelector('.search-form');
-const searchBox = document.querySelector('#search-box');
-document.querySelector('#search-button').onclick = (e) => {
-  searchForm.classList.toggle('active');
-  searchBox.focus();
-  e.preventDefault();
-};
 
 // Toggle class active untuk shopping cart
 const shoppingCart = document.querySelector('.shopping-cart');
@@ -25,9 +17,6 @@ document.addEventListener('click', function (e) {
   if (!navbarNav.contains(e.target) && !e.target.closest('#hamburger-menu')) {
     navbarNav.classList.remove('active');
   }
-  if (!searchForm.contains(e.target) && !e.target.closest('#search-button')) {
-    searchForm.classList.remove('active');
-  }
   if (!shoppingCart.contains(e.target) && !e.target.closest('#shopping-cart-button')) {
     shoppingCart.classList.remove('active');
   }
@@ -35,12 +24,11 @@ document.addEventListener('click', function (e) {
 
 // Data produk
 const products = [
-  { id: 1, name: "Espresso", price: 15000, image: "./img/menu/1.jpg", description: "Lorem ipsum dolor sit amet" , quantity : 0},
-  { id: 2, name: "Cappuccino", price: 25000, image: "./img/menu/1.jpg", description: "Rich and creamy taste" , quantity : 0},
-  { id: 3, name: "Latte", price: 20000, image: "./img/menu/1.jpg", description: "Smooth and delicious" , quantity : 0},
-  { id: 4, name: "Capuccino", price: 25000, image: "./img/menu/1.jpg", description: "Perfectly blended" , quantity : 0},
-  { id: 5, name: "Robusta", price: 20000, image: "./img/menu/1.jpg", description: "Strong and bold flavor" , quantity : 0},
-  { id: 6, name: "Kapal Api", price: 20000, image: "./img/menu/1.jpg", description: "A classic favorite" , quantity : 0},
+  { id: 1, name: "Espresso", price: 15000, image: "./img/menu/espreso.jpeg", description: "Lorem ipsum dolor sit amet" , quantity : 0},
+  { id: 2, name: "Americano", price: 25000, image: "./img/menu/americano.jpeg", description: "Rich and creamy taste" , quantity : 0},
+  { id: 3, name: "Latte", price: 20000, image: "./img/menu/latte.jpeg", description: "Smooth and delicious" , quantity : 0},
+  { id: 4, name: "Capuccino", price: 25000, image: "./img/menu/capuccino.jpeg", description: "Perfectly blended" , quantity : 0},
+  { id: 5, name: "Robusta", price: 20000, image: "./img/menu/robusta.jpg", description: "Strong and bold flavor" , quantity : 0},
 ];
 
 // Format harga ke IDR
@@ -108,7 +96,6 @@ function displayProductsMenu(data) {
   });
 
   feather.replace();
-  setupCartEvents(data);
 }
 
 // Tambahkan produk ke keranjang
@@ -124,6 +111,7 @@ function setupCartEvents(data) {
 
       if (existingProduct) {
         existingProduct.quantity += 1; // Tambahkan quantity jika produk sudah ada
+        console.log(data)
       } else {
         cartItems.push({ ...product, quantity: 1 }); // Tambahkan produk baru ke keranjang
       }
