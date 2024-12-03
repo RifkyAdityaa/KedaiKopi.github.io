@@ -681,7 +681,7 @@ footer .credit a {
     display: inline-block;
   }
 
-  {
+  #total-belanja{
     top: 0;
     left: 87%;
   }
@@ -798,7 +798,7 @@ footer .credit a {
     text-align: center; /* Menyelaraskan teks harga ke tengah */
   }
   
-  {
+  #total-belanja{
     top: 49%;
   }
 }
@@ -806,7 +806,7 @@ footer .credit a {
 /* Mobile Phone */
 
 @media (max-width : 592px) {
-  {
+  #total-belanja{
     left: 83.9% ;
   }
 
@@ -816,7 +816,7 @@ footer .credit a {
     font-size: 55%;
   }
 
-  {
+  #total-belanja{
     left: 82%;
   }
 }
